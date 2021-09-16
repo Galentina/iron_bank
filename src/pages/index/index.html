@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Iron Bank</title>
+</head>
+<body>
+	<main>
+		<section class="info__section log_in__section">
+			<div class="container">
+				<svg id="logoClick" xmlns="http://www.w3.org/2000/svg" width="270" height="37" viewBox="0 0 270 37" class="logo">
+				    <text id="io" transform="translate(0 29)" fill="#0f0f0f" font-size="27" font-family="NotoSans-Bold, Noto Sans" letter-spacing="0.027em" font-weight="700">
+				        <tspan x="0" y="0">Iron &nbsp;</tspan>
+				        <tspan y="0" font-family="AppleColorEmoji, Apple Color Emoji" font-weight="400">⚔️</tspan>
+				        <tspan y="0" xml:space="preserve">Bank</tspan>
+				    </text>
+				</svg>
+
+				<div id="login" style="display: none" class="log_in__section__wrap">
+                    <h1 class="title__h1 section__title">Bank entrance</h1>
+                    <h2 class="title__h2 section__subtitle">Welcome back! Pass authorization in order to use banking services.</h2>
+                    <form id="logForm" action="" method="" class="form">
+                        <label class="form__label" for="email">E-mail
+							<span id="errorLogEmail" class="form__span" style="opacity: 0">Required</span>
+						</label>
+                        <input class="form__input" name="email" type="email" id="email" placeholder="your@email.com">
+                        <label class="form__label" for="password">Password
+							<span id="errorLogPassword" class="form__span" style="opacity: 0">Required</span></label>
+                        <input class="form__input" name="password" type="password" id="password" placeholder="Введите свой пароль">
+                        <label class="form__label form__checkbox" for="savePassword">
+                            <input type="checkbox" id="savePassword" name="terms" checked="">
+                            <span class="checkmark"></span>
+							Save login and password<br>
+                        </label>
+                        <input class="form__button form__submit" type="submit" value="Войти в Банк">
+                    </form>
+                    <div class="additional__links">
+                        <p class="additional__links--remark">Don't have an account in our Bank?</p>
+                        <a id="passToReg" class="additional__links--link" href="#">Register now</a>
+                    </div>
+				</div>
+
+				<div id="registration" style="display: inherit" class="register__section__wrap">
+					<h1 class="title__h1 section__title">Registration in our Bank</h1>
+					<h2 class="title__h2 section__subtitle">Create your personal account.</h2>
+
+					<form id="regForm" action="" method="" class="form">
+						<label class="form__label" for="registerName">Name and surname
+							<span id="errorRegName" class="form__span" style="opacity: 0">Required</span></label>
+
+						<input class="form__input" name="name" type="text" id="registerName" placeholder="Insert your name and surname">
+
+						<label class="form__label" for="registerEmail">E-mail
+							<span id="errorRegEmail" class="form__span" style="opacity: 0">Required.</span>
+						</label>
+						<input class="form__input" name="email" type="email" id="registerEmail" placeholder="Insert your e-mail address">
+
+						<label class="form__label" for="registerTel">Telephone number
+							<span id="errorRegTel" class="form__span" style="opacity: 0">Required</span>
+						</label>
+						<input class="form__input" name="tel" type="tel" id="registerTel" placeholder="+XX XXXXXXXXXX">
+
+						<label class="form__label" for="registerPassword">Password
+							<span id="errorRegPassword" class="form__span" style="opacity: 0">Required. Must NOT have fewer than 8 characters</span>
+						</label>
+						<input class="form__input" name="password" type="password" id="registerPassword" placeholder="Insert your password">
+
+						<label class="form__label form__checkbox" for="registerTerms">
+							<input type="checkbox" name="terms" id="registerTerms" checked="">
+							<span class="checkmark"></span>
+
+							I agree with the provisions of the Bank<br>
+							<p id="checkMark" style="opacity: 0" class="spanError">*</p>
+						</label>
+
+
+						<input class="form__button form__submit" type="submit" value="Register">
+					</form>
+
+					<div class="additional__links">
+						<p class="additional__links--remark">Already have an account?</p> <a id="passToLogin" class="additional__links--link" href="#">Enter</a>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="decorative__section">
+			<img class="decorative__section__img" src="img/scene_3.svg" alt="">
+		</section>
+	</main>
+
+</body>
+</html>

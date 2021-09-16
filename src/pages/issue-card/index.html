@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Iron Bank: Card issuance</title>
+</head>
+<body>
+	<main>
+		<section class="info__section card__create__section">
+			<div class="container">
+				<svg style="cursor: pointer;" xmlns="http://www.w3.org/2000/svg" width="270" height="37" viewBox="0 0 270 37" class="logo">
+				    <text id="io" transform="translate(0 29)" fill="#0f0f0f" font-size="27" font-family="NotoSans-Bold, Noto Sans" letter-spacing="0.027em" font-weight="700">
+				        <tspan x="0" y="0">Iron&nbsp;</tspan>
+				        <tspan y="0" font-family="AppleColorEmoji, Apple Color Emoji" font-weight="400">⚔️</tspan>
+				        <tspan y="0" xml:space="preserve">Bank</tspan>
+				    </text>
+				</svg>
+
+				<div class="card__create__section__wrap">
+                    <h1 class="title__h1 section__title">Card issuance</h1>
+                    <h2 class="title__h2 section__subtitle">It's time to order your first plastic card in our Bank</h2>
+                    <form id="newCardForm" action="" method="" class="form">
+                        <label class="form__label" for="cardName">Your name</label>
+                        <input class="form__input" type="text" id="cardName" placeholder="Please insert your name" value="">
+                        <fieldset>
+                            <div class="paysystem__block">
+                                <label class="form__label" for="paySystem">Payment system</label>
+                                <div class="form__paysystem paysystem__visa">
+                                    <!--
+										Для того что бы открыть dropdown нужно добавить к классу dropdown класс dropdown--open и
+										к классу dropdown__toggle класс active
+									 -->
+                                    <div id="dropDownSystem" class="dropdown">
+                                        <div id="dropToggle" class="dropdown__toggle">
+                                            <img id="imageSystem" src="img/icon/visa-icon.svg" class="paysystem__icon visa__icon" alt="">
+                                            <input id="inputSystem" name="system" class="form__input" type="text"  placeholder="Visa" readonly="">
+                                            <img id="paySystem" src="img/icon/arr-bottom.svg" class="info__icon" alt="">
+                                        </div>
+                                        <div  class="dropdown__list">
+                                            <div id="visaCard" class="dropdown__list__item">
+                                                <img src="img/icon/visa-icon.svg" class="paysystem__icon visa__icon" alt="">
+                                                <p class="form__input">Visa</p>
+                                            </div>
+                                            <div id="masterCard" class="dropdown__list__item">
+                                                <img src="img/icon/mastercard-icon.svg" class="paysystem__icon mastercard__icon" alt="">
+                                                <p class="form__input">Mastercard</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="currency__block">
+                                <label class="form__label" for="currency">Currency</label>
+                                <div class="form__currency form__info">
+                                    <!--
+										Для того что бы открыть dropdown нужно добавить к классу dropdown класс dropdown--open и к классу dropdown__toggle класс active
+									 -->
+                                    <div id="dropDownCurrency" class="dropdown">
+                                        <div id="currencyToggle" class="dropdown__toggle">
+                                            <input name="currency" class="form__input" type="text" id="currency" placeholder="Dollar" readonly="">
+                                            <img id="currencyList" src="img/icon/arr-bottom.svg" class="info__icon" alt="">
+                                        </div>
+                                        <div  class="dropdown__list">
+                                            <div class="dropdown__list__item">
+                                                <p id="usd" class="form__input">Dollar</p>
+                                            </div>
+                                            <div class="dropdown__list__item">
+                                                <p id="eur" class="form__input">Euro</p>
+                                            </div>
+                                            <div class="dropdown__list__item">
+                                                <p id="uah" class="form__input">Hryvnia</p>
+                                            </div>
+                                            <div class="dropdown__list__item">
+                                                <p id="rub" class="form__input">Rubles</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </fieldset>
+                        <label class="form__label">Card class</label>
+                        <div id="classList" name="class" class="form__select bottom__gap">
+                            <div id="cardLow" class="radio__button">
+                                <input type="radio" name="cardClass" id="low">
+                                <label for="low">Gold</label>
+                                <div class="select__back"></div>
+                            </div>
+                            <div id="cardMedium" class="radio__button">
+                                <input type="radio" name="cardClass" id="medium" value="" checked>
+                                <label id="cardM" for="medium">Platinum</label>
+                                <div class="select__back"></div>
+                            </div>
+                            <div id="cardHigh" class="radio__button">
+                                <input type="radio" name="cardClass" id="high">
+                                <label id="cardH" for="high">Signature</label>
+                                <div class="select__back"></div>
+                            </div>
+                        </div>
+
+                        <label class="form__label" for="cardDescr">Short description of the card</label>
+                        <input class="form__input" type="text" id="cardDescr" name="descr" placeholder="Personal card">
+
+                        <label class="form__label form__checkbox" for="cardTerm">
+                            <input type="checkbox" id="cardTerm" checked="">
+                            <span class="checkmark"></span><span id="checkMarkCard" style="opacity: 0" class="spanError">*</span>
+                            I agree with the provisions of the Bank
+                        </label>
+                        <input class="form__button form__submit" type="submit" value="Выпустить карту">
+                    </form>
+                    <div style="display: none;" data-type="mastercard" class="additional__links">
+                        <p class="additional__links--remark">We open the World Elite class map only on our own initiative.</p>
+					</div>
+					<div data-type="visa" class="additional__links">
+                        <p class="additional__links--remark">We open the Infinite class card only on our own initiative.</p>
+                    </div>
+                </div>
+			</div>
+		</section>
+		<section class="decorative__section">
+			<img class="decorative__section__img" src="img/scene_2.svg" alt="">
+		</section>
+	</main>
+
+</body>
+</html>
